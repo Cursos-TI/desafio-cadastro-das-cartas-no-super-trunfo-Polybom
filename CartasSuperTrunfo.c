@@ -1,3 +1,5 @@
+#include <sdtio.h>
+
 int main() {
 
     int pontosCarta1 = 0;
@@ -52,6 +54,45 @@ int main() {
     printf("Pontos Turísticos: %d\n", pontos2);
     printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
     printf("PIB per Capita: %.2f reais\n", pibPerCapita2);
+
+    //Comparação
+
+    printf("\n==== Comparação de Cartas ====\n");
+
+    if (populacao1 > populacao2) { printf("População: Carta 1 venceu\n"); pontosCarta1++; }
+    else { printf("População: Carta 2 venceu\n"); pontosCarta2++; }
+
+    if (area1 > area2) { printf("Área: Carta 1 venceu\n"); pontosCarta1++; }
+    else { printf("Área: Carta 2 venceu\n"); pontosCarta2++; }
+
+    if (pib1 > pib2) { printf("PIB: Carta 1 venceu\n"); pontosCarta1++; }
+    else { printf("PIB: Carta 2 venceu\n"); pontosCarta2++; }
+
+    if (pontos1 > pontos2) { printf("Pontos Turísticos: Carta 1 venceu\n"); pontosCarta1++; }
+    else { printf("Pontos Turísticos: Carta 2 venceu\n"); pontosCarta2++; }
+
+    if (densidade1 < densidade2) { printf("Densidade Populacional: Carta 1 venceu\n"); pontosCarta1++; }  
+    else { printf("Densidade Populacional: Carta 2 venceu\n"); pontosCarta2++; }
+
+    if (pibPerCapita1 > pibPerCapita2) { printf("PIB per Capita: Carta 1 venceu\n"); pontosCarta1++; }
+    else { printf("PIB per Capita: Carta 2 venceu\n"); pontosCarta2++; }
+
+    if (superPoder1 > superPoder2) { printf("Super Poder: Carta 1 venceu\n"); pontosCarta1++; }
+    else { printf("Super Poder: Carta 2 venceu\n"); pontosCarta2++; }
+
+    //Resultado final
+
+    printf("\n==== Resultado Final ====\n");
+    printf("Carta 1 (%s): %d pontos\n", cidade1, pontosCarta1);
+    printf("Carta 2 (%s): %d pontos\n", cidade2, pontosCarta2);
+
+    if (pontosCarta1 > pontosCarta2) {
+        printf("?? Carta 1 (%s) é a campeã!\n", cidade1);
+    } else if (pontosCarta2 > pontosCarta1) {
+        printf("?? Carta 2 (%s) é a campeã!\n", cidade2);
+    } else {
+        printf("?? Empate entre as duas cartas!\n");
+    }
 
     return 0;
 }
