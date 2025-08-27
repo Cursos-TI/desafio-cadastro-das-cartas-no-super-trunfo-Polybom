@@ -42,7 +42,7 @@ int main() {
     printf("Pontos Turísticos: %d\n", pontos1);
     printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
     printf("PIB per Capita: %.2f reais\n", pibPerCapita1);
-    printf("Super Poder: %f\n", superPoder1);
+    printf("Super Poder: %.2f\n", superPoder1);
 
     // Mostrar Carta 2
     printf("\n==== CARTA 2 ====\n");
@@ -55,7 +55,7 @@ int main() {
     printf("Pontos Turísticos: %d\n", pontos2);
     printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
     printf("PIB per Capita: %.2f reais\n", pibPerCapita2);
-    printf("Super Poder: %f\n", superPoder2);
+    printf("Super Poder: %.2f\n", superPoder2);
 
     //Comparação
 
@@ -89,11 +89,11 @@ int main() {
     printf("Carta 2 (%s): %d pontos\n", cidade2, pontosCarta2);
 
     if (pontosCarta1 > pontosCarta2) {
-        printf("?? Carta 1 (%s) é a campeã!\n", cidade1);
+        printf("Carta 1 (%s) é a campeã!\n", cidade1);
     } else if (pontosCarta2 > pontosCarta1) {
-        printf("?? Carta 2 (%s) é a campeã!\n", cidade2);
+        printf("Carta 2 (%s) é a campeã!\n", cidade2);
     } else {
-        printf("?? Empate entre as duas cartas!\n");
+        printf("Empate entre as duas cartas!\n");
     }
 
     return 0;
